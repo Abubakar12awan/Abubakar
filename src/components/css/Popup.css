@@ -1,0 +1,42 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+  
+  .popup.open {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .content {
+    background-color: white;
+    width: 60%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    transform: rotateX(30deg);
+    transition: transform 0.3s;
+  }
+  
+  .popup.open .content {
+    transform: rotateX(0deg);
+  }
+  
+  .button-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
